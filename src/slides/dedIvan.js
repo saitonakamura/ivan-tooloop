@@ -128,6 +128,9 @@ const Cards = styled.div`
   align-items: stretch;
   justify-content: flex-end;
   padding-right: 50px;
+  * + * {
+    margin-top: 10px;
+  }
 `
 
 const Paper = styled.div`
