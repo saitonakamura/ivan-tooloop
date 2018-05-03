@@ -1,5 +1,5 @@
 import React from 'react'
-import { Presentation, Slide } from 'presa'
+import { Presentation, Slide } from '@saitonakamura/presa'
 import { RefreshCw } from 'react-feather'
 import { Activity } from 'react-feather'
 import styled, { css, keyframes } from 'styled-components'
