@@ -1,0 +1,45 @@
+{
+  "name": "ivan-tooloop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svg": "pixo src/assets/svg --out-dir src/assets/svgReact"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saitonakamura/ivan-tooloop.git"
+  },
+  "keywords": [
+    "event loop",
+    "presentation",
+    "presa"
+  ],
+  "author": "Mikhail Bashurov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saitonakamura/ivan-tooloop/issues"
+  },
+  "homepage": "https://github.com/saitonakamura/ivan-tooloop#readme",
+  "dependencies": {
+    "presa": "^1.0.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-feather": "^1.1.0",
+    "react-syntax-highlighter": "^7.0.4",
+    "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
+    "parcel-bundler": "^1.7.1",
+    "pixo": "^1.0.2",
+    "prettier": "^1.12.1"
+  }
+}

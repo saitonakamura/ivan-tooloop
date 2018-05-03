@@ -1,3 +1,10 @@
+# Parcel
+.cache
+dist
+
+# Pixo
+src/assets/svgReact
+
 # Logs
 logs
 *.log
@@ -56,4 +63,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
