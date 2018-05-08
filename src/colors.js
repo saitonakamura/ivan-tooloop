@@ -4,4 +4,5 @@ export const colors = {
   purpleBlack: '#360A40',
   purpleDark: '#A11DBF',
   purpleDarker: '#6B137F',
+  red: 'rgb(216, 0, 39)',
 }

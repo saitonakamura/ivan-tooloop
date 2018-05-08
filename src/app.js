@@ -7,7 +7,7 @@ import { ItTitle, ItH1, ItH3 } from './blocks'
 import { colors } from './colors'
 import jslogo from './assets/images/js-logo.png'
 import dotnetlogo from './assets/images/dotnet-logo.png'
-import { DevIvanSlide } from './slides'
+import * as Slides from './slides'
 
 // No need to pass indexes here
 export const App = () => (
@@ -25,7 +25,11 @@ export const App = () => (
       <p>Люблю красивый UI, зеленые тесты.</p>
       <LinkOfJsDotnet />
     </Slide>
-    <DevIvanSlide />
+    <Slides.DevIvanSlide name="Иван Тулуп и его карты" />
+    <Slides.StackSlide name="Стек" />
+    <Slides.SystemicCirculationSlide name="Большой круг кровообращения" />
+    <Slides.LoupeDemoSlide name="Демо Филипа Робертса: loupe" />
+    <Slides.BrowserPrioritiesSlide name="Приоритеты браузеров и очереди задач" />
   </Presentation>
 )
 
