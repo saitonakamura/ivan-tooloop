@@ -6,13 +6,12 @@
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
       "jsx": true
     },
     "sourceType": "module",
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   },
-  "plugins": ["react"],
+  "plugins": ["react", "babel"],
   "rules": {
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],

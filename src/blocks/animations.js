@@ -40,3 +40,25 @@ export const flip = keyframes`
     transform: rotateY(360deg);
   }
 `
+
+export const draw = keyframes`
+  to {
+    stroke-dashoffset: 0;
+  }
+`
+
+export const createMoveAndDisappear = (x, y) => keyframes`
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(${x}, ${y})
+  }
+
+  100% {
+    transform: translate(${x}, ${y});
+    opacity: 0;
+  }
+`

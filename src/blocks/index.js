@@ -1,4 +1,14 @@
-import { Title, Caption, Code, H1, H2, H3, H4 } from 'presa/blocks'
+import React from 'react'
+import { Fragment } from '@saitonakamura/presa'
+import {
+  Title,
+  Caption,
+  Code,
+  H1,
+  H2,
+  H3,
+  H4,
+} from '@saitonakamura/presa/blocks'
 import styled from 'styled-components'
 import { colors } from '../colors'
 
@@ -37,3 +47,11 @@ export const Paper = styled.div`
   justify-content: center;
   padding: 20px;
 `
+
+const RenderWhenActiveBehaviour = styled.div`
+  display: ${p => (p.active ? 'block' : 'none')};
+`
+
+export const RenderWhenActiveFragment = props => (
+  <Fragment {...props} behaviour={RenderWhenActiveBehaviour} />
+)
