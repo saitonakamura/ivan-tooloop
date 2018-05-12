@@ -2,9 +2,10 @@
   "name": "ivan-tooloop",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
+    "build": "rimraf dist && parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "svg": "pixo src/assets/svg --out-dir src/assets/svgReact"
   },

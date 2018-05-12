@@ -17,5 +17,8 @@ export const App = () => (
     <Slides.IOCallbacksPhaseSlide name="Фаза I/O колбэков" />
     <Slides.NothingToDoHereSlide name="Фаза idle/prepare" />
     <Slides.PollPhaseSlide name="Фаза poll" />
+    <Slides.CheckPhaseSlide name="Фаза check" />
+    <Slides.ClosePhaseSlide name="Фаза close callbacks" />
+    <Slides.MicroTasksTitleSlide name="Микротаски" />
   </Presentation>
 )
