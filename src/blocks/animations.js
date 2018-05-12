@@ -1,28 +1,27 @@
 import { keyframes } from 'styled-components'
 
 export const heartbeat = keyframes`
-  0%
-  {
+  0% {
     transform: scale( 1 );
   }
-  20%
-  {
+
+  20% {
     transform: scale( 1.25 );
   }
-  40%
-  {
+
+  40% {
     transform: scale( 1 );
   }
-  60%
-  {
+
+  60% {
     transform: scale( 1.25 );
   }
-  80%
-  {
+
+  80% {
     transform: scale( 1 );
   }
-  100%
-  {
+  
+  100% {
     transform: scale( 1 );
   }
 `

@@ -9,7 +9,7 @@ import {
   H3,
   H4,
 } from '@saitonakamura/presa/blocks'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { colors } from '../colors'
 
 export const ItTitle = styled(Title)`
@@ -17,17 +17,20 @@ export const ItTitle = styled(Title)`
   font-size: 4em;
   padding-bottom: ${p => (p.bordered ? '10px' : 0)};
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
+  margin-bottom: ${p => (p.margined ? '20px' : 0)};
 `
 
 export const ItH1 = styled(H1)`
   font-weight: normal;
   padding-bottom: 5px;
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
+  margin-bottom: ${p => (p.margined ? '20px' : 0)};
 `
 
 export const ItH2 = styled(H2)`
   padding-bottom: 5px;
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
+  margin-bottom: ${p => (p.margined ? '20px' : 0)};
 `
 
 export const ItH3 = styled(H3)``
@@ -55,3 +58,14 @@ const RenderWhenActiveBehaviour = styled.div`
 export const RenderWhenActiveFragment = props => (
   <Fragment {...props} behaviour={RenderWhenActiveBehaviour} />
 )
+
+export const visuallyHidden = css`
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+`
