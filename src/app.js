@@ -14,5 +14,8 @@ export const App = () => (
     <Slides.BrowserPrioritiesSlide name="Приоритеты браузеров и очереди задач" />
     <Slides.NodeEventLoopSlide name="Event Loop в Node.js" />
     <Slides.TimersPhaseSlide name="Фаза таймеров" />
+    <Slides.IOCallbacksPhaseSlide name="Фаза I/O колбэков" />
+    <Slides.NothingToDoHereSlide name="Фаза idle/prepare" />
+    <Slides.PollPhaseSlide name="Фаза poll" />
   </Presentation>
 )

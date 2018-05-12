@@ -17,20 +17,20 @@ export const ItTitle = styled(Title)`
   font-size: 4em;
   padding-bottom: ${p => (p.bordered ? '10px' : 0)};
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
-  margin-bottom: ${p => (p.margined ? '20px' : 0)};
+  margin-bottom: ${p => p.margin || 0};
 `
 
 export const ItH1 = styled(H1)`
   font-weight: normal;
   padding-bottom: 5px;
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
-  margin-bottom: ${p => (p.margined ? '20px' : 0)};
+  margin-bottom: ${p => p.margin || 0};
 `
 
 export const ItH2 = styled(H2)`
   padding-bottom: 5px;
   border-bottom: ${p => (p.bordered ? '5px' : 0)} solid ${colors.purple};
-  margin-bottom: ${p => (p.margined ? '20px' : 0)};
+  margin-bottom: ${p => p.margin || 0};
 `
 
 export const ItH3 = styled(H3)``
@@ -69,3 +69,5 @@ export const visuallyHidden = css`
   padding: 0;
   border: 0;
 `
+
+export * from './fragmentedList'

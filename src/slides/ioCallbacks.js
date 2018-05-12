@@ -1,27 +1,27 @@
 import React from 'react'
 import { Slide } from '@saitonakamura/presa'
 import styled from 'styled-components'
-import HourglassIcon from '../assets/svgReact/Hourglass'
-import { colors } from '../colors'
+// import HourglassIcon from '../assets/svgReact/Hourglass'
+// import { colors } from '../colors'
 import { ItH1, FragmentList, FragmentListItem } from '../blocks'
 
-export const TimersPhaseSlide = props => (
+export const IOCallbacksPhaseSlide = props => (
   <Slide {...props}>
     <ItH1 margin="50px" bordered>
-      Фаза таймеров
+      Фаза I/O колбэков
     </ItH1>
     <TwoColsLayout>
       <TimersInfo>
         <FragmentList>
+          <FragmentListItem>Все колбэки от I/O</FragmentListItem>
+          <FragmentListItem>Круто делать setImmediate</FragmentListItem>
           <FragmentListItem>
-            Исполняет колбеки готовых таймеров
+            Имеет лимит по кол-ву колбеков чтобы не виснуть
           </FragmentListItem>
-          <FragmentListItem>setTimeout и setInterval</FragmentListItem>
-          <FragmentListItem>НЕ setImmediate</FragmentListItem>
         </FragmentList>
       </TimersInfo>
       <TimersLogo>
-        <HourglassIcon size={300} color={colors.purpleDark} />
+        {/* <HourglassIcon size={300} color={colors.purpleDark} /> */}
       </TimersLogo>
     </TwoColsLayout>
   </Slide>
