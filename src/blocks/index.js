@@ -39,7 +39,9 @@ export const ItH4 = styled(H4)``
 
 export const ItCaption = styled(Caption)``
 
-export const ItCode = styled(Code)``
+export const ItCode = styled(Code)`
+  margin: ${p => (p.margined ? '40px 0' : 0)};
+`
 
 export const Paper = styled.div`
   background: rgb(255, 255, 255);
@@ -71,3 +73,4 @@ export const visuallyHidden = css`
 `
 
 export * from './fragmentedList'
+export * from './button'
