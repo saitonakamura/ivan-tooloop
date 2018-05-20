@@ -12,6 +12,8 @@ export const FragmentListItem = ({ ...rest }) => (
 
 const List = styled.ul`
   font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
 `
 
 const Item = styled.li`

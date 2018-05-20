@@ -11,7 +11,7 @@ export const TitleSlide = props => (
     centered
     {...props}
   >
-    <ItTitle>Иван Тулуп: асинхронщина в JS</ItTitle>
+    <ItTitle>Иван Тулуп: асинхронщина в JS под капотом</ItTitle>
   </Slide>
 )
 

@@ -9,7 +9,7 @@ export const AllGonnaExecuteSlide = props => (
     <Figure>
       <Img src={allGonnaDanceImg} />
       <CenterItTitle>Выполняем всё!</CenterItTitle>
-      <HiddenFigcaption>Harold That Hides a Pain meme</HiddenFigcaption>
+      <HiddenFigcaption>All Gonna Dance meme</HiddenFigcaption>
     </Figure>
   </Slide>
 )
