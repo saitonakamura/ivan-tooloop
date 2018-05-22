@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "rimraf dist && parcel build index.html",
+    "build": "rimraf docs && parcel build --out-dir docs --public-url /ivan-tooloop index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "svg": "pixo src/assets/svg --out-dir src/assets/svgReact"
   },
