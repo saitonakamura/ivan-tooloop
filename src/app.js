@@ -10,6 +10,7 @@ export const App = () => (
   <Presentation name="Иван Тулуп: асинхронщина в JS" theme={theme}>
     <Slides.TitleSlide name="Иван Тулуп: асинхронщина в JS" />
     <Slides.AboutMeSlide name="Обо мне" />
+
     <Slides.HaroldMemeSlide name="Кандидатура для Ивана Тулупа" />
     <Slides.DevIvanSlide name="Иван Тулуп и его карты" />
     <Slides.InfractionSlide name="Факты об инфаркте" />
@@ -18,6 +19,8 @@ export const App = () => (
     <Slides.LoupeDemoSlide name="Демо Филипа Робертса: loupe" />
     <Slides.StackSlide name="Стек" />
     <Slides.BrowserPrioritiesSlide name="Приоритеты браузеров и очереди задач" />
+    <Slides.TasksSummarySlide name="Итоги по таскам" />
+
     <Slides.TerminatorSantaSlide name="Терминатор-Санта: маскот Event Loop в Node.js" />
     <Slides.NodeEventLoopSlide name="Event Loop в Node.js" />
     <Slides.TimersPhaseSlide name="Фаза таймеров" />
@@ -26,21 +29,29 @@ export const App = () => (
     <Slides.PollPhaseSlide name="Фаза poll" />
     <Slides.CheckPhaseSlide name="Фаза check" />
     <Slides.ClosePhaseSlide name="Фаза close callbacks" />
-    <Slides.TasksSummarySlide name="Итоги по таскам" />
+    <Slides.TasksSummaryNodeSlide name="Итоги по таскам в Node.js" />
+
     <Slides.MicroTasksTitleSlide name="Микротаски" />
     <Slides.EventLoopWhatwgSlide name="Event Loop версия whatwg" />
     <Slides.MicrotaskSourcesSlide name="Источники микротасок" />
     <Slides.AllGonnaExecuteSlide name="Microtask checkpoint: выполняем всё" />
     <Slides.MicrotaskCheckpointSlide name="Как работает microtask checkpoint" />
+    <Slides.MicrotaskStarveSlide name="Как заблокировать Event loop микротасками" />
     <Slides.MicrotaskStackExample1Slide name="Таски и микротаски: асинхронный пример" />
     <Slides.MicrotaskStackExampleSyncSlide name="Таски и микротаски: синхронный пример" />
     <Slides.MicrotaskStackAnimationsAsyncSlide name="Асинхронный пример: объяснение" />
     <Slides.MicrotaskStackAnimationsSyncSlide name="Синхронный пример: объяснение" />
+    <Slides.MicrotasksModalExampleSlide name="Пример с модальным окном" />
+    <Slides.MicrotasksSummarySlide name="Итоги по микротаскам" />
+
     <Slides.MicrotasksNodeSlide name="Микротаски в Node.js" />
     <Slides.ProcessNextTickSlide name="process.nextTick: пример" />
     <Slides.ProcessNextTickFixedSlide name="process.nextTick: исправленная версия" />
     <Slides.AsyncAwaitSlide name="async / await" />
-    <Slides.MicrotasksSummarySlide name="Итоги по микротаскам" />
+    <Slides.MicrotasksNodeSummarySlide name="Итоги по микротаскам в Node.js" />
+
     <Slides.MaterialsSlide name="Материалы для изучения" />
+    <Slides.LinksSlide name="Ссылка на презентацию" />
+    <Slides.QuestionsSlide name="Вопросы?" />
   </Presentation>
 )

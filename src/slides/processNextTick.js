@@ -2,6 +2,7 @@ import React from 'react'
 import { Slide } from '@saitonakamura/presa'
 import styled from 'styled-components'
 import { ItCode } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 const code = `const createServer = () => {
   const evEmitter = new EventEmitter()
@@ -18,7 +19,7 @@ const server = createServer().listen(8080)
 server.on('listening', () => console.log('listening')`
 
 export const ProcessNextTickSlide = props => (
-  <Slide centered initialFragmentIndex={0} {...props}>
+  <Slide centered background={slideBackImg} initialFragmentIndex={0} {...props}>
     <Figure>
       <ItCode margined>{code}</ItCode>
       <figcaption>process.nextTick</figcaption>

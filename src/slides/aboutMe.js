@@ -6,9 +6,10 @@ import { ItH1, ItH3 } from '../blocks'
 import { colors } from '../colors'
 import jslogo from '../assets/images/js-logo.png'
 import dotnetlogo from '../assets/images/dotnet-logo.png'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const AboutMeSlide = props => (
-  <Slide centered {...props}>
+  <Slide centered background={slideBackImg} {...props}>
     <ItH1 bordered>Михаил Башуров</ItH1>
     <ItH3>Фулстак на JS / .NET</ItH3>
     <p>Люблю красивый UI, зеленые тесты.</p>

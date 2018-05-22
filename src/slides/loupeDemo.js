@@ -1,9 +1,10 @@
 import React from 'react'
 import { Slide } from '@saitonakamura/presa'
 import { ItTitle } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const LoupeDemoSlide = props => (
-  <Slide centered {...props}>
+  <Slide centered background={slideBackImg} {...props}>
     <ItTitle>
       <a
         rel="noopener noreferrer"

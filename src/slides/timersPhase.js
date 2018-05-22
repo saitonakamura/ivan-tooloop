@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import HourglassIcon from '../assets/svgReact/Hourglass'
 import { colors } from '../colors'
 import { ItH1, FragmentList, FragmentListItem } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const TimersPhaseSlide = props => (
-  <Slide {...props}>
+  <Slide background={slideBackImg} {...props}>
     <ItH1 margin="50px" bordered>
       Фаза таймеров
     </ItH1>

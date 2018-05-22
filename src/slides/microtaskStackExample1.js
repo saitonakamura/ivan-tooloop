@@ -1,10 +1,10 @@
 import React from 'react'
 import { Slide, Fragment } from '@saitonakamura/presa'
 import styled from 'styled-components'
-import { ItCode, RenderWhenActiveFragment } from '../blocks'
+import { ItCode, RenderWhenActiveFragment, Button } from '../blocks'
 import fusrodahImg from '../assets/images/fus-ro-dah.jpg'
-import Button from '../blocks/button'
 import { colors } from '../colors'
+import slideBackImg from '../assets/images/slide-back.png'
 
 const code = `const container = document.querySelector('#grayContainerOne')
 const button = document.querySelector('#buttonOne')
@@ -33,11 +33,12 @@ export class MicrotaskStackExample1Slide extends React.Component {
 
   render() {
     return (
-      <Slide centered {...this.props}>
+      <Slide centered background={slideBackImg} {...this.props}>
         {/* <Figure> */}
         <Cols>
           <ItCode>{code}</ItCode>
           <Console
+            key="console1"
             value={window.outputOne.reduce(
               (acc, curr) => `${acc}\r\n${curr}`,
               '',

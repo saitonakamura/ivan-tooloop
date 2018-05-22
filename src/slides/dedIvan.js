@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slide, Fragment } from '@saitonakamura/presa'
+import { Slide } from '@saitonakamura/presa'
 import SantaClausIcon from '../assets/svgReact/SantaClaus'
 import CardsIcon from '../assets/svgReact/Poker'
 import HeartIcon from '../assets/svgReact/Heart'
@@ -7,9 +7,10 @@ import styled from 'styled-components'
 import { ItTitle, RenderWhenActiveFragment } from '../blocks'
 import { colors } from '../colors'
 import { heartbeat, flip } from '../blocks/animations'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const DevIvanSlide = props => (
-  <Slide centered {...props}>
+  <Slide centered background={slideBackImg} {...props}>
     <ItTitle bordered>Дед Иван Тулуп</ItTitle>
     <ImagesCont>
       <IconCont>

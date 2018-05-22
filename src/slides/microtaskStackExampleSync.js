@@ -1,10 +1,15 @@
 import React from 'react'
 import { Slide, Fragment } from '@saitonakamura/presa'
 import styled from 'styled-components'
-import { ItCode, RenderWhenActiveFragment, visuallyHidden } from '../blocks'
+import {
+  ItCode,
+  RenderWhenActiveFragment,
+  visuallyHidden,
+  Button,
+} from '../blocks'
 import fusroderpImg from '../assets/images/fus-ro-derp.jpg'
-import Button from '../blocks/button'
 import { colors } from '../colors'
+import slideBackImg from '../assets/images/slide-back.png'
 
 const code = `const container = document.querySelector('#grayContainerTwo')
 const button = document.querySelector('#buttonTwo')
@@ -22,7 +27,7 @@ container.addEventListener('click', () => {
 
 button.click()`
 
-window.outputOne = []
+window.outputTwo = []
 
 export class MicrotaskStackExampleSyncSlide extends React.Component {
   handleClick = () => {
@@ -35,18 +40,18 @@ export class MicrotaskStackExampleSyncSlide extends React.Component {
     eval(
       code
         .replace(/button\.click\(\)/g, '')
-        .replace(/console\.log/g, 'window.outputOne.push'),
+        .replace(/console\.log/g, 'window.outputTwo.push'),
     )
   }
 
   render() {
     return (
-      <Slide centered {...this.props}>
+      <Slide centered background={slideBackImg} {...this.props}>
         {/* <Figure> */}
         <Cols>
           <ItCode>{code}</ItCode>
           <Console
-            value={window.outputOne.reduce(
+            value={window.outputTwo.reduce(
               (acc, curr) => `${acc}\r\n${curr}`,
               '',
             )}

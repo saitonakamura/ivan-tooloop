@@ -1,10 +1,11 @@
 import React from 'react'
 import { Slide } from '@saitonakamura/presa'
 import styled from 'styled-components'
-import { FragmentList, FragmentListItem } from '../blocks'
+import { FragmentList, FragmentListItem, Caption } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const MicrotaskCheckpointSlide = props => (
-  <Slide centered {...props}>
+  <Slide centered background={slideBackImg} {...props}>
     <Figure>
       <FragmentList>
         <FragmentListItem>Выполняем все до конца</FragmentListItem>
@@ -23,4 +24,4 @@ const Figure = styled.figure`
   padding: 0;
 `
 
-const Figcaption = styled.figcaption``
+const Figcaption = Caption.withComponent('figcaption')

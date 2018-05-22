@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { rgba } from 'polished'
 import { colors } from '../colors'
 
-const Button = ({ icon, children, ...props }) => (
+export const Button = ({ icon, children, ...props }) => (
   <ButtonContainer {...props}>
     {icon && <ButtonIcon>{icon}</ButtonIcon>}
     {children}
@@ -31,14 +31,16 @@ const ButtonContainer = styled.button`
   color: black;
   font-family: inherit;
   padding: 9px 11px;
-  font-size: 18px;
+  font-size: 25px;
   margin: 4px;
+
   &:hover {
     background-color: ${rgba(borderColor, 0.01)};
   }
   &:active {
     background-color: ${rgba(borderColor, 0.1)};
   }
+
   ${props =>
     props.checked &&
     css`
@@ -49,5 +51,3 @@ const ButtonContainer = styled.button`
       }
     `};
 `
-
-export default Button

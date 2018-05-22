@@ -2,21 +2,21 @@ import React from 'react'
 import { Slide } from '@saitonakamura/presa'
 // import styled from 'styled-components'
 import { ItH1, FragmentList, FragmentListItem } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const PollPhaseSlide = props => (
-  <Slide {...props}>
+  <Slide background={slideBackImg} {...props}>
     <ItH1 margin="50px" bordered>
       Фаза poll
     </ItH1>
     <FragmentList>
+      <FragmentListItem>Исполняет I/O колбеки</FragmentListItem>
+      <FragmentListItem>Круто делать setImmediate</FragmentListItem>
       <FragmentListItem>
-        Ждем событий от I/O и кладем их в poll queue
+        Нет таймеров и setImmediate: ждем событий от I/O
       </FragmentListItem>
       <FragmentListItem>
-        Если нет таймеров и setImmediate то просто ждет новых событий
-      </FragmentListItem>
-      <FragmentListItem>
-        Сам умеет класть таймеры в очередь выполнения
+        Лимит по кол-ву колбеков за раз (pending callbacks)
       </FragmentListItem>
     </FragmentList>
   </Slide>

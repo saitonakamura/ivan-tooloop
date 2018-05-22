@@ -74,3 +74,6 @@ export const visuallyHidden = css`
 
 export * from './fragmentedList'
 export * from './button'
+export * from './caption'
+export * from './strike'
+export * from './divider'

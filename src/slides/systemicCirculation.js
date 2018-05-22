@@ -1,22 +1,19 @@
 import React from 'react'
-// import { findDOMNode } from 'react-dom'
 import { Slide, Fragment } from '@saitonakamura/presa'
 import HeartIcon from '../assets/svgReact/Heart'
 import BloodVesselIcon from '../assets/svgReact/BloodVessel'
 import styled from 'styled-components'
-import { ItH1, Paper } from '../blocks'
+import { Paper, Caption, Button } from '../blocks'
 import { colors } from '../colors'
 import { draw, heartbeat } from '../blocks/animations'
-// import Button from '../blocks/button'
-
-let heartRef
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const SystemicCirculationSlide = props => (
-  <Slide {...props}>
+  <Slide background={slideBackImg} {...props}>
     {/* <ItH1 bordered>Большой круг кровообращения браузера</ItH1> */}
     <Container>
       <TaskCards>
-        <ColorHeartIcon size={300} innerRef={ref => (heartRef = ref)} />
+        <ColorHeartIcon size={300} id="heartToStopSystemic" />
         <RevealAndDisapearFragment>
           <TaskCard>
             Выполняем код <br /> из скрипта
@@ -41,17 +38,16 @@ export const SystemicCirculationSlide = props => (
         <RevealAndDisapearFragment />
       </TaskCards>
     </Container>
-    {/* <ButtonContainer>
+    <Caption>
       <Button
         onClick={() => {
-          if (!heartRef) return
-
-          findDOMNode(heartRef).style['animation-iteration-count'] = 0
+          const heartEl = document.querySelector('#heartToStopSystemic')
+          heartEl.style['animation-iteration-count'] = 0
         }}
       >
-        Тромб
+        💔 Тромб
       </Button>
-    </ButtonContainer> */}
+    </Caption>
   </Slide>
 )
 
@@ -60,12 +56,6 @@ const Container = styled.div`
   margin: 50px 0;
   align-items: flex-end;
 `
-
-// const ButtonContainer = styled.div`
-//   display: flex;
-//   width: 100%;
-//   justify-content: center;
-// `
 
 const TaskCards = styled.div`
   position: relative;
@@ -88,7 +78,7 @@ const TaskCard = Paper.extend`
   transform: translateY(-50%);
 `
 
-const RevealAndDisapearBehaviour = ({ current, ...rest }) =>
+const RevealAndDisapearBehaviour = ({ current, active, ...rest }) =>
   current ? <div {...rest} /> : null
 
 const RevealAndDisapearFragment = props => (
@@ -96,6 +86,9 @@ const RevealAndDisapearFragment = props => (
 )
 
 const RefreshDraw = styled(BloodVesselIcon)`
+  position: absolute;
+  top: 0%;
+
   path {
     fill-opacity: 0;
     stroke: ${colors.red};

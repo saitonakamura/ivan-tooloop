@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import CurvedArrowIcon from '../assets/svgReact/CurvedArrow'
 import { Paper } from '../blocks'
 // import { colors } from '../colors'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const EventLoopWhatwgSlide = props => (
-  <Slide centered initialFragmentIndex={0} {...props}>
+  <Slide centered background={slideBackImg} initialFragmentIndex={0} {...props}>
     <Figure>
       <Cols>
         <Rows>

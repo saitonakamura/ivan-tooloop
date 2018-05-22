@@ -3,7 +3,8 @@ import { Slide, Fragment } from '@saitonakamura/presa'
 import styled, { css } from 'styled-components'
 import { Transition } from 'react-spring'
 import SantaClausIcon from '../assets/svgReact/SantaClaus'
-import { ItCode, Paper } from '../blocks'
+import { ItCode, Paper, Caption, Button } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 const stackSource = {
   addAndMultiply: 'addAndMultiply(2, 5, 3)',
@@ -90,7 +91,7 @@ export class StackSlide extends React.Component {
     )
 
     return (
-      <Slide {...this.props}>
+      <Slide background={slideBackImg} {...this.props}>
         {cardsAnimated}
         <Cont>
           <Cards>{stackAnimated}</Cards>
@@ -108,6 +109,10 @@ const addAndMultiply = (n1, n2, n3) =>
 addAndMultiply(2, 5, 3)
         `}</ItCode>
         </Cont>
+        <Caption>
+          <Button onClick={this.navigateBackwards}>👈 Предыдущий шаг</Button>
+          <Button onClick={this.navigateForward}>Следующий шаг 👉</Button>
+        </Caption>
       </Slide>
     )
   }

@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import MicroscopeIcon from '../assets/svgReact/MicroscopeTwo'
 import { ItTitle } from '../blocks'
 import { colors } from '../colors'
+import slideBackImg from '../assets/images/slide-back.png'
 
 /* eslint-disable react/no-unescaped-entities */
 export const MicroTasksTitleSlide = props => (
-  <Slide centered {...props}>
+  <Slide background={slideBackImg} centered {...props}>
     <Rows>
       <Fragment>
         <ItTitle>Микро</ItTitle>

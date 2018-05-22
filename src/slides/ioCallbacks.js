@@ -4,19 +4,21 @@ import styled from 'styled-components'
 // import HourglassIcon from '../assets/svgReact/Hourglass'
 // import { colors } from '../colors'
 import { ItH1, FragmentList, FragmentListItem } from '../blocks'
+import slideBackImg from '../assets/images/slide-back.png'
 
 export const IOCallbacksPhaseSlide = props => (
-  <Slide {...props}>
+  <Slide background={slideBackImg} {...props}>
     <ItH1 margin="50px" bordered>
-      Фаза I/O колбэков
+      Фаза оставшихся I/O колбэков
     </ItH1>
     <TwoColsLayout>
       <TimersInfo>
         <FragmentList>
-          <FragmentListItem>Все колбэки от I/O</FragmentListItem>
-          <FragmentListItem>Круто делать setImmediate</FragmentListItem>
           <FragmentListItem>
-            Имеет лимит по кол-ву колбеков чтобы не виснуть
+            Все колбэки от I/O c предыдущего тика
+          </FragmentListItem>
+          <FragmentListItem>
+            setImmediate чуть лучше чем таймеры
           </FragmentListItem>
         </FragmentList>
       </TimersInfo>
