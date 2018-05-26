@@ -7,38 +7,77 @@ import { colors } from '../colors'
 import HeartIcon from '../assets/svgReact/Heart'
 import slideBackImg from '../assets/images/slide-back.png'
 
+const step = 4
+
+const stepsDelay = count => `${step * count + 4}s`
+
 export const BrowserPrioritiesSlide = props => (
   <Slide background={slideBackImg} {...props}>
     <Container>
       <TaskQueue>
         <QueueName>User interaction</QueueName>
-        <Task delay="12s" toX="513px" toY="133px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(4)}
+          toX="513px"
+          toY="133px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>onClick</Paper>
         </Task>
-        <Task delay="9s" toX="413px" toY="133px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(3)}
+          toX="413px"
+          toY="133px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>onChange</Paper>
         </Task>
-        <Task delay="3s" toX="283px" toY="133px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(1)}
+          toX="283px"
+          toY="133px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>onFocus</Paper>
         </Task>
       </TaskQueue>
-      <Divider />
+      <Divider style={{ width: '80%' }} />
       <TaskQueue>
         <QueueName>Timeouts</QueueName>
-        <Task delay="21s" toX="515px" toY="0px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(7)}
+          toX="545px"
+          toY="0px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>setTimeout</Paper>
         </Task>
-        <Task delay="15s" toX="410px" toY="0px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(5)}
+          toX="410px"
+          toY="0px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>setInterval</Paper>
         </Task>
       </TaskQueue>
-      <Divider />
+      <Divider style={{ width: '80%' }} />
       <TaskQueue>
         <QueueName>Post messages</QueueName>
-        <Task delay="18s" toX="490px" toY="-123px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(6)}
+          toX="490px"
+          toY="-123px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>postMessage</Paper>
         </Task>
-        <Task delay="6s" toX="370px" toY="-123px" onAnimationEnd={hideElement}>
+        <Task
+          delay={stepsDelay(2)}
+          toX="370px"
+          toY="-123px"
+          onAnimationEnd={hideElement}
+        >
           <Paper>postMessage</Paper>
         </Task>
       </TaskQueue>
@@ -81,8 +120,8 @@ const QueueName = styled.div`
 
 const ColorHeartIcon = styled(HeartIcon)`
   color: ${colors.red};
-  animation: ${heartbeat} 3s 7;
-  animation-delay: 3.5s;
+  animation: ${heartbeat} ${step}s 7;
+  animation-delay: 8.8s;
   position: absolute;
   right: -3%;
   top: 25%;

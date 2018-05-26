@@ -3,14 +3,13 @@ import { Slide, Fragment } from '@saitonakamura/presa'
 import HeartIcon from '../assets/svgReact/Heart'
 import BloodVesselIcon from '../assets/svgReact/BloodVessel'
 import styled from 'styled-components'
-import { Paper, Caption, Button } from '../blocks'
+import { Paper } from '../blocks'
 import { colors } from '../colors'
 import { draw, heartbeat } from '../blocks/animations'
 import slideBackImg from '../assets/images/slide-back.png'
 
 export const SystemicCirculationSlide = props => (
   <Slide background={slideBackImg} {...props}>
-    {/* <ItH1 bordered>Большой круг кровообращения браузера</ItH1> */}
     <Container>
       <TaskCards>
         <ColorHeartIcon size={300} id="heartToStopSystemic" />
@@ -38,16 +37,6 @@ export const SystemicCirculationSlide = props => (
         <RevealAndDisapearFragment />
       </TaskCards>
     </Container>
-    <Caption>
-      <Button
-        onClick={() => {
-          const heartEl = document.querySelector('#heartToStopSystemic')
-          heartEl.style['animation-iteration-count'] = 0
-        }}
-      >
-        💔 Тромб
-      </Button>
-    </Caption>
   </Slide>
 )
 
@@ -55,6 +44,7 @@ const Container = styled.div`
   display: flex;
   margin: 50px 0;
   align-items: flex-end;
+  height: 100%;
 `
 
 const TaskCards = styled.div`
@@ -62,6 +52,9 @@ const TaskCards = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  position: absolute;
+  top: 20%;
+  left: 20%;
 `
 
 const ColorHeartIcon = styled(HeartIcon)`
@@ -87,7 +80,7 @@ const RevealAndDisapearFragment = props => (
 
 const RefreshDraw = styled(BloodVesselIcon)`
   position: absolute;
-  top: 0%;
+  top: -15%;
 
   path {
     fill-opacity: 0;
@@ -95,6 +88,6 @@ const RefreshDraw = styled(BloodVesselIcon)`
     stroke-width: 10;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: ${draw} 5s 1;
+    animation: ${draw} 7s 1;
   }
 `

@@ -14,7 +14,7 @@ export const ClosePhaseSlide = props => (
       <FragmentListItem>
         Колбеки закрытия сокетов и прочего типа
         <br />
-        <ItCode style={{ fontSize: '0.8em' }}>socket.on('close', …)</ItCode>
+        <Code>socket.on('close', …)</Code>
       </FragmentListItem>
       <FragmentListItem>
         Выполнятся в этой фазе только в случае неожиданного события
@@ -22,3 +22,8 @@ export const ClosePhaseSlide = props => (
     </FragmentList>
   </Slide>
 )
+
+const Code = ItCode.extend`
+  font-size: 1em;
+  margin-top: 20px;
+`

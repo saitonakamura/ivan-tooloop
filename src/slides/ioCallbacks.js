@@ -6,25 +6,19 @@ import styled from 'styled-components'
 import { ItH1, FragmentList, FragmentListItem } from '../blocks'
 import slideBackImg from '../assets/images/slide-back.png'
 
-export const IOCallbacksPhaseSlide = props => (
+export const PendingCallbacksPhaseSlide = props => (
   <Slide background={slideBackImg} {...props}>
     <ItH1 margin="50px" bordered>
-      Фаза оставшихся I/O колбэков
+      Фаза pending callbacks
     </ItH1>
     <TwoColsLayout>
-      <TimersInfo>
+      <Info>
         <FragmentList>
           <FragmentListItem>
-            Все колбэки от I/O c предыдущего тика
-          </FragmentListItem>
-          <FragmentListItem>
-            setImmediate чуть лучше чем таймеры
+            Колбэки от некоторых системных операций (TCP error)
           </FragmentListItem>
         </FragmentList>
-      </TimersInfo>
-      <TimersLogo>
-        {/* <HourglassIcon size={300} color={colors.purpleDark} /> */}
-      </TimersLogo>
+      </Info>
     </TwoColsLayout>
   </Slide>
 )
@@ -35,6 +29,4 @@ const TwoColsLayout = styled.div`
   align-items: center;
 `
 
-const TimersInfo = styled.div``
-
-const TimersLogo = styled.div``
+const Info = styled.div``

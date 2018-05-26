@@ -7,11 +7,10 @@ import { ItCode, Paper, Caption, Button } from '../blocks'
 import slideBackImg from '../assets/images/slide-back.png'
 
 const stackSource = {
-  addAndMultiply: 'addAndMultiply(2, 5, 3)',
-  multiply: 'multiply(add(n1, n2), n3)',
-  add: 'add(n1, n2)',
-  plus: 'n1 + n2',
-  mult: 'n1 * n2',
+  handleClick: 'handleClick(e)',
+  log: 'console.log(e)',
+  showConfirm: 'showConfirm(message)',
+  confirm: 'window.confirm(message)',
 }
 
 const code = {
@@ -55,6 +54,10 @@ export class StackSlide extends React.Component {
     document.body.addEventListener('keydown', this.handleKeyDown)
   }
 
+  componentDidUpdate() {
+    if (this.state.index === 10) window.confirm('Вы уверены?')
+  }
+
   componentWillUnmount() {
     document.body.removeEventListener('keydown', this.handleKeyDown)
   }
@@ -68,7 +71,7 @@ export class StackSlide extends React.Component {
       <Transition
         keys={cardsToshow.map(item => item.key)}
         from={{ opacity: 0, height: 0, left: '70%' }}
-        enter={{ opacity: 1, height: 400, left: '50%' }}
+        enter={{ opacity: 1, height: 300, left: '50%' }}
         leave={{ opacity: 0, height: 0, left: '30%' }}
       >
         {cardsToshow.map(item => styles => (
@@ -96,17 +99,15 @@ export class StackSlide extends React.Component {
         <Cont>
           <Cards>{stackAnimated}</Cards>
           <ItCode>{`
-const add = (n1, n2) => n1 + n2
+const showConfirm = (message) =>
+  window.confirm(message)
 
-const multiply = (n1, n2) => n1 * n2
+const handleClick = (e) => {
+  console.log(e)
+  return showPopup('Вы уверены?')
+}
 
-const addAndMultiply = (n1, n2, n3) =>
-  multiply(
-    add(n1, n2),
-    n3
-  )
-
-addAndMultiply(2, 5, 3)
+handleClick(e)
         `}</ItCode>
         </Cont>
         <Caption>
@@ -138,11 +139,11 @@ const Cards = styled.div`
 const Card = Paper.extend`
   position: absolute;
   z-index: 1;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 400px;
-  height: 450px;
+  height: 300px;
 `
 
 const StackItem = Paper.extend`
@@ -171,55 +172,45 @@ const CardBehavior = styled(Card)`
 const cards = [
   {
     visible: i => i === 1,
-    children: <ItCode>{stackSource.addAndMultiply}</ItCode>,
-    key: stackSource.addAndMultiply,
+    children: <ItCode>{stackSource.handleClick}</ItCode>,
+    key: stackSource.handleClick,
   },
   {
     visible: i => i === 3,
-    children: <ItCode>{stackSource.multiply}</ItCode>,
-    key: stackSource.multiply,
+    children: <ItCode>{stackSource.log}</ItCode>,
+    key: stackSource.log,
   },
   {
-    visible: i => i === 5,
-    children: <ItCode>{stackSource.add}</ItCode>,
-    key: stackSource.add,
+    visible: i => i === 6,
+    children: <ItCode>{stackSource.showConfirm}</ItCode>,
+    key: stackSource.showConfirm,
   },
   {
-    visible: i => i === 7,
-    children: <ItCode>{stackSource.plus}</ItCode>,
-    key: stackSource.plus,
-  },
-  {
-    visible: i => i === 11,
-    children: <ItCode>{stackSource.mult}</ItCode>,
-    key: stackSource.mult,
+    visible: i => i === 8,
+    children: <ItCode>{stackSource.confirm}</ItCode>,
+    key: stackSource.confirm,
   },
 ]
 
 const stack = [
   {
-    visible: i => i >= 12 && i <= 12,
-    children: <ItCode>{stackSource.mult}</ItCode>,
-    key: stackSource.mult,
+    visible: i => i >= 9 && i <= 9,
+    children: <ItCode>{stackSource.confirm}</ItCode>,
+    key: stackSource.confirm,
   },
   {
-    visible: i => i >= 8 && i <= 8,
-    children: <ItCode>{stackSource.plus}</ItCode>,
-    key: stackSource.plus,
+    visible: i => i >= 7 && i <= 10,
+    children: <ItCode>{stackSource.showConfirm}</ItCode>,
+    key: stackSource.showConfirm,
   },
   {
-    visible: i => i >= 6 && i <= 9,
-    children: <ItCode>{stackSource.add}</ItCode>,
-    key: stackSource.add,
+    visible: i => i >= 4 && i <= 4,
+    children: <ItCode>{stackSource.log}</ItCode>,
+    key: stackSource.log,
   },
   {
-    visible: i => i >= 4 && i <= 13,
-    children: <ItCode>{stackSource.multiply}</ItCode>,
-    key: stackSource.multiply,
-  },
-  {
-    visible: i => i >= 2 && i <= 14,
-    children: <ItCode>{stackSource.addAndMultiply}</ItCode>,
-    key: stackSource.addAndMultiply,
+    visible: i => i >= 2 && i <= 11,
+    children: <ItCode>{stackSource.handleClick}</ItCode>,
+    key: stackSource.handleClick,
   },
 ]

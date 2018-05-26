@@ -15,9 +15,7 @@ export const PollPhaseSlide = props => (
       <FragmentListItem>
         Нет таймеров и setImmediate: ждем событий от I/O
       </FragmentListItem>
-      <FragmentListItem>
-        Лимит по кол-ву колбеков за раз (pending callbacks)
-      </FragmentListItem>
+      <FragmentListItem>Лимит по кол-ву колбеков за раз</FragmentListItem>
     </FragmentList>
   </Slide>
 )

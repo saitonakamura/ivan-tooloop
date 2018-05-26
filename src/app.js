@@ -15,23 +15,41 @@ export const App = () => (
     <Slides.DevIvanSlide name="Иван Тулуп и его карты" />
     <Slides.InfractionSlide name="Факты об инфаркте" />
     <Slides.SystemicCirculationSlide name="Большой круг кровообращения" />
+    <Slides.IOBoundCpuBoundSlide name="I/O bound vs CPU bound" />
+    <Slides.ArithmiaAndTrombSlide name="Аритмия и тромб" />
     <Slides.RipSlide name="Вот и помер Дед Иван" />
+    <Slides.BrowsersEventLoopDiagramSlide
+      name="Event Loop в браузере: упрощенная версия"
+      task
+      render
+    />
     <Slides.LoupeDemoSlide name="Демо Филипа Робертса: loupe" />
     <Slides.StackSlide name="Стек" />
     <Slides.BrowserPrioritiesSlide name="Приоритеты браузеров и очереди задач" />
+    <Slides.AsynCycleBrowsersSlide name="Асинхронный цикл на таймауте" />
+    <Slides.BrowsersEventLoopDiagramSlide
+      name="Event Loop в браузере: requestAnimationFrame"
+      task
+      render
+      raf={false}
+    />
+    <Slides.CpuBoundSolutionsSlide name="Способы решение долгой cpu-bound операции" />
     <Slides.TasksSummarySlide name="Итоги по таскам" />
 
     <Slides.TerminatorSantaSlide name="Терминатор-Санта: маскот Event Loop в Node.js" />
     <Slides.NodeEventLoopSlide name="Event Loop в Node.js" />
+    <Slides.LibuvSlide name="Libuv" />
     <Slides.TimersPhaseSlide name="Фаза таймеров" />
-    <Slides.IOCallbacksPhaseSlide name="Фаза I/O колбэков" />
+    <Slides.PendingCallbacksPhaseSlide name="Фаза I/O колбэков" />
     <Slides.NothingToDoHereSlide name="Фаза idle/prepare" />
     <Slides.PollPhaseSlide name="Фаза poll" />
     <Slides.CheckPhaseSlide name="Фаза check" />
     <Slides.ClosePhaseSlide name="Фаза close callbacks" />
+    <Slides.NodeAsyncCycleWrongSlide name="Node: неверный асинхронный цикл" />
+    <Slides.NodeAsyncCycleRightSlide name="Node: рекурсивный асинхронный цикл" />
     <Slides.TasksSummaryNodeSlide name="Итоги по таскам в Node.js" />
 
-    <Slides.MicroTasksTitleSlide name="Микротаски" />
+    <Slides.MicroTasksTitleSlide name="Микротаски: малый круг кровообращения" />
     <Slides.EventLoopWhatwgSlide name="Event Loop версия whatwg" />
     <Slides.MicrotaskSourcesSlide name="Источники микротасок" />
     <Slides.AllGonnaExecuteSlide name="Microtask checkpoint: выполняем всё" />
@@ -46,9 +64,9 @@ export const App = () => (
 
     <Slides.MicrotasksNodeSlide name="Микротаски в Node.js" />
     <Slides.ProcessNextTickSlide name="process.nextTick: пример" />
-    <Slides.ProcessNextTickFixedSlide name="process.nextTick: исправленная версия" />
-    <Slides.AsyncAwaitSlide name="async / await" />
     <Slides.MicrotasksNodeSummarySlide name="Итоги по микротаскам в Node.js" />
+
+    <Slides.AsyncAwaitSlide name="async / await" />
 
     <Slides.MaterialsSlide name="Материалы для изучения" />
     <Slides.LinksSlide name="Ссылка на презентацию" />

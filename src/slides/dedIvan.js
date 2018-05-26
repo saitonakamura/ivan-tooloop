@@ -11,7 +11,7 @@ import slideBackImg from '../assets/images/slide-back.png'
 
 export const DevIvanSlide = props => (
   <Slide centered background={slideBackImg} {...props}>
-    <ItTitle bordered>Дед Иван Тулуп</ItTitle>
+    <ItTitle margin="40px">Дед Иван Тулуп</ItTitle>
     <ImagesCont>
       <IconCont>
         <RenderWhenActiveFragment>

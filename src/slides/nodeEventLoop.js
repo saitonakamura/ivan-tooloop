@@ -8,10 +8,10 @@ export const NodeEventLoopSlide = props => (
     <FragmentList>
       <FragmentListItem>Timers</FragmentListItem>
       <FragmentListItem>Pending callback</FragmentListItem>
-      <FragmentListItem>Idle/prepare</FragmentListItem>
+      <FragmentListItem>Idle, prepare</FragmentListItem>
       <FragmentListItem>Poll</FragmentListItem>
       <FragmentListItem>Check</FragmentListItem>
-      <FragmentListItem>Close</FragmentListItem>
+      <FragmentListItem>Close callbacks</FragmentListItem>
     </FragmentList>
     <Caption>Фазы Event Loop в Node.js</Caption>
   </Slide>
