@@ -97,7 +97,8 @@ const Render = Checkpoint.extend`
   border-color: ${colors.red};
 
   &:after {
-    content: 'Рендер';
+    content: 'Рендер ?';
+    width: 170px;
     right: 150%;
     top: -35%;
   }

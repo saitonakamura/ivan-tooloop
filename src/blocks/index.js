@@ -3,14 +3,15 @@ import { Fragment } from '@saitonakamura/presa'
 import {
   Title,
   Caption,
-  Code,
   H1,
   H2,
   H3,
   H4,
+  Code,
 } from '@saitonakamura/presa/blocks'
 import styled, { css } from 'styled-components'
 import { colors } from '../colors'
+// import { Code } from './code'
 
 export const ItTitle = styled(Title)`
   font-weight: lighter;
@@ -35,7 +36,9 @@ export const ItH2 = styled(H2)`
 
 export const ItH3 = styled(H3)``
 
-export const ItH4 = styled(H4)``
+export const ItH4 = styled(H4)`
+  font-weight: 500;
+`
 
 export const ItCaption = styled(Caption)``
 
@@ -77,3 +80,4 @@ export * from './button'
 export * from './caption'
 export * from './strike'
 export * from './divider'
+export * from './link'

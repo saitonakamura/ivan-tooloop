@@ -61,3 +61,32 @@ export const createMoveAndDisappear = (x, y) => keyframes`
     opacity: 0;
   }
 `
+
+export const bounce = keyframes`
+  0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                     transform: translate3d(0,0,0);
+               transform-style: preserve-3d;
+                    box-shadow: 0 0 0 rgba(0,0,0,.9);
+  }
+
+  40%, 43% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                     transform: translate3d(0, -30px, 0);
+               transform-style: preserve-3d;
+                    box-shadow: 0 30px 30px rgba(0,0,0,.01);
+  }
+
+  70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                     transform: translate3d(0, -15px, 0);
+               transform-style: preserve-3d;
+                    box-shadow: 0 15px 15px rgba(0,0,0,.5);
+  }
+
+  90% {
+            transform: translate3d(0,-4px,0);
+      transform-style: preserve-3d;
+           box-shadow: 0 4px 4px rgba(4px,0,4px,.7);
+  }
+`

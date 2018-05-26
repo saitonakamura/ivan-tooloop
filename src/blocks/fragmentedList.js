@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Fragment } from '@saitonakamura/presa'
 
 export const FragmentList = ({ ...rest }) => <List {...rest} />
@@ -19,4 +19,17 @@ const List = styled.ul`
 const Item = styled.li`
   text-align: left;
   list-style-type: circle;
+
+  ${p =>
+    p.listStyleType
+      ? css`
+          list-style-type: none;
+
+          &:before {
+            content: \'${p => p.listStyleType}\';
+            position: absolute;
+            left: 11%;
+          }
+        `
+      : ''};
 `

@@ -8,10 +8,10 @@ export const MicrotasksNodeSummarySlide = props => (
   <Slide centered background={slideBackImg} {...props}>
     <Figure>
       <FragmentList>
-        <FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
           Надо заботиться о бесконечных вызовах
         </FragmentListItem>
-        <FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
           process.nextTick для вызова колбэков
         </FragmentListItem>
       </FragmentList>
@@ -20,6 +20,8 @@ export const MicrotasksNodeSummarySlide = props => (
   </Slide>
 )
 
-const Figure = styled.figure``
+const Figure = styled.div`
+  width: 80%;
+`
 
 const Figcaption = Caption.withComponent('figcaption')

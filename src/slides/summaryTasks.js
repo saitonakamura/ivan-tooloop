@@ -8,11 +8,21 @@ export const TasksSummarySlide = props => (
   <Slide background={slideBackImg} centered {...props}>
     <Figure>
       <FragmentList>
-        <FragmentListItem>Дробить на маленькие задачи</FragmentListItem>
-        <FragmentListItem>Много типов задач</FragmentListItem>
-        <FragmentListItem>Приоретизация через очереди</FragmentListItem>
-        <FragmentListItem>Многое решается браузерами</FragmentListItem>
-        <FragmentListItem>Спецификация соблюдается не всегда</FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Дробить на маленькие задачи
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Много типов задач
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Приоретизация через очереди
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Многое решается браузерами
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Спецификация соблюдается не всегда
+        </FragmentListItem>
       </FragmentList>
       <Figcaption>Итоги по таскам в браузерах</Figcaption>
     </Figure>

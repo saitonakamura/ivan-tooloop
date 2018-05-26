@@ -8,9 +8,15 @@ export const MicrotasksSummarySlide = props => (
   <Slide centered background={slideBackImg} {...props}>
     <Figure>
       <FragmentList>
-        <FragmentListItem>Можно заблокировать event loop</FragmentListItem>
-        <FragmentListItem>Каждый раз после таски</FragmentListItem>
-        <FragmentListItem>Каждый раз когда пустеет стек</FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Можно заблокировать event loop
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Каждый раз после таски
+        </FragmentListItem>
+        <FragmentListItem listStyleType="🎉">
+          Каждый раз когда пустеет стек
+        </FragmentListItem>
       </FragmentList>
       <Figcaption>Итоги по микротаскам</Figcaption>
     </Figure>

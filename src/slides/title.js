@@ -1,7 +1,7 @@
 import React from 'react'
 import { Slide } from '@saitonakamura/presa'
-import { RefreshCw } from 'react-feather'
-import styled, { css, keyframes } from 'styled-components'
+import RefreshIcon from '../assets/svgReact/Refresh'
+import styled, { keyframes } from 'styled-components'
 import { ItTitle } from '../blocks'
 import { colors } from '../colors'
 import titleBackImg from '../assets/images/title-back.png'
@@ -46,10 +46,10 @@ const rotation = keyframes`
   }
 `
 
-const StyledRefreshCw = styled(RefreshCw)`
+const StyledRefreshCw = styled(RefreshIcon)`
   position: absolute;
   right: 5%;
-  bottom: 9%;
+  bottom: 8.5%;
   animation: ${rotation} 2s cubic-bezier(0.3, -0.25, 0.5, 1.25) infinite;
   opacity: 1;
 `

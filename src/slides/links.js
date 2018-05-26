@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Slide, BuiltWithPresa } from 'presa'
+import { Link } from '../blocks'
 import slideBackImg from '../assets/images/slide-back.png'
 
 export const LinksSlide = props => (
   <Slide background={slideBackImg} {...props}>
-    link to the slides
+    Сыылка на слайды
     <LinkWrap>
       <LinkIcon>👉 </LinkIcon>
       <FinalLink
@@ -16,7 +17,7 @@ export const LinksSlide = props => (
         saitonakamura.github.io/ivan-tooloop/
       </FinalLink>
     </LinkWrap>
-    source code
+    Исходники
     <LinkWrap>
       <LinkIcon>⭐️ </LinkIcon>
       <FinalLink
@@ -27,7 +28,7 @@ export const LinksSlide = props => (
         github.com/saitonakamura/ivan-tooloop
       </FinalLink>
     </LinkWrap>
-    slides made with
+    Сделано с
     <LinkWrap>
       <LinkIcon>🔥 </LinkIcon>
       <FinalLink
@@ -36,6 +37,57 @@ export const LinksSlide = props => (
         href="http://github.com/molefrog/presa"
       >
         github.com/molefrog/presa
+      </FinalLink>
+    </LinkWrap>
+    Иконки от
+    <LinkWrap style={{ flexWrap: 'wrap' }}>
+      <LinkIcon>🍒 </LinkIcon>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="https://www.flaticon.com/authors/good-ware"
+      >
+        Good ware
+      </FinalLink>
+      <span>, </span>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="https://www.flaticon.com/authors/becris"
+      >
+        Becris
+      </FinalLink>
+      <span>, </span>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="https://www.flaticon.com/authors/freepik"
+      >
+        Freepik
+      </FinalLink>
+      <span>, </span>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="https://www.flaticon.com/authors/kiranshastry"
+      >
+        Kiranshastry
+      </FinalLink>
+      <span>, </span>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="https://www.flaticon.com/authors/smashicons"
+      >
+        Smashicons
+      </FinalLink>
+      <span>с</span>
+      <FinalLink
+        target="_blank"
+        rel="noreferer noopener"
+        href="http://www.flaticon.com/"
+      >
+        www.flaticon.com
       </FinalLink>
     </LinkWrap>
     <Footer>
@@ -71,6 +123,7 @@ const OwnContacts = styled.div`
 
 const LinkWrap = styled.div`
   display: flex;
+  align-items: baseline;
   margin-top: 4px;
   margin-bottom: 32px;
 `
@@ -80,15 +133,8 @@ const LinkIcon = styled.div`
   margin-right: 10px;
 `
 
-const FinalLink = styled.a`
+const FinalLink = Link.extend`
   font-size: 32px;
   font-weight: 500;
-  text-decoration: underline;
-  color: #333;
   padding: 0 8px;
-  transition: all 0.2s ease;
-  &:hover {
-    background: #333;
-    color: white;
-  }
 `

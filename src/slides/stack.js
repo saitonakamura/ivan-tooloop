@@ -1,8 +1,7 @@
 import React from 'react'
-import { Slide, Fragment } from '@saitonakamura/presa'
-import styled, { css } from 'styled-components'
+import { Slide } from '@saitonakamura/presa'
+import styled from 'styled-components'
 import { Transition } from 'react-spring'
-import SantaClausIcon from '../assets/svgReact/SantaClaus'
 import { ItCode, Paper, Caption, Button } from '../blocks'
 import slideBackImg from '../assets/images/slide-back.png'
 
@@ -20,7 +19,7 @@ const code = {
 
 export class StackSlide extends React.Component {
   startIndex = 0
-  endIndex = 15
+  endIndex = 11
   state = { index: 0 }
 
   handleKeyDown = e => {
@@ -150,24 +149,24 @@ const StackItem = Paper.extend`
   height: 0;
 `
 
-const CardBehavior = styled(Card)`
-  transition: all 0.2s ease-in;
-  opacity: ${props => (props.current ? 1 : 0)};
-  ${props => {
-    if (!props.current && !props.active)
-      return css`
-        transform: translateX(-50%) translateY(-50%) scale(0);
-      `
-    if (props.current && props.active)
-      return css`
-        transform: translateX(-50%) translateY(-50%) scale(1);
-      `
-    if (!props.current && props.active)
-      return css`
-        transform: translateX(-50%) translateY(-50%) scale(1);
-      `
-  }};
-`
+// const CardBehavior = styled(Card)`
+//   transition: all 0.2s ease-in;
+//   opacity: ${props => (props.current ? 1 : 0)};
+//   ${props => {
+//     if (!props.current && !props.active)
+//       return css`
+//         transform: translateX(-50%) translateY(-50%) scale(0);
+//       `
+//     if (props.current && props.active)
+//       return css`
+//         transform: translateX(-50%) translateY(-50%) scale(1);
+//       `
+//     if (!props.current && props.active)
+//       return css`
+//         transform: translateX(-50%) translateY(-50%) scale(1);
+//       `
+//   }};
+// `
 
 const cards = [
   {
