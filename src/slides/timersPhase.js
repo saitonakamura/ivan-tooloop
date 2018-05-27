@@ -15,7 +15,7 @@ export const TimersPhaseSlide = props => (
       <TimersInfo>
         <FragmentList>
           <FragmentListItem>
-            Исполняет колбеки готовых таймеров
+            Исполняет коллбэки готовых таймеров
           </FragmentListItem>
           <FragmentListItem>setTimeout и setInterval</FragmentListItem>
           <FragmentListItem>НЕ setImmediate</FragmentListItem>

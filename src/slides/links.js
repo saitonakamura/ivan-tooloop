@@ -6,7 +6,7 @@ import slideBackImg from '../assets/images/slide-back.png'
 
 export const LinksSlide = props => (
   <Slide background={slideBackImg} {...props}>
-    Сыылка на слайды
+    Ссылка на слайды
     <LinkWrap>
       <LinkIcon>👉 </LinkIcon>
       <FinalLink

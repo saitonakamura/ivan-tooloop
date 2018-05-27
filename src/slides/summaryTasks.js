@@ -15,7 +15,7 @@ export const TasksSummarySlide = props => (
           Много типов задач
         </FragmentListItem>
         <FragmentListItem listStyleType="🎉">
-          Приоретизация через очереди
+          Приоритизация через очереди
         </FragmentListItem>
         <FragmentListItem listStyleType="🎉">
           Многое решается браузерами

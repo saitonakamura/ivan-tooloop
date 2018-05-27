@@ -10,12 +10,12 @@ export const PollPhaseSlide = props => (
       Фаза poll
     </ItH1>
     <FragmentList>
-      <FragmentListItem>Исполняет I/O колбеки</FragmentListItem>
+      <FragmentListItem>Исполняет I/O-коллбэки</FragmentListItem>
       <FragmentListItem>Круто делать setImmediate</FragmentListItem>
       <FragmentListItem>
         Нет таймеров и setImmediate: ждем событий от I/O
       </FragmentListItem>
-      <FragmentListItem>Лимит по кол-ву колбеков за раз</FragmentListItem>
+      <FragmentListItem>Лимит по кол-ву коллбэков за раз</FragmentListItem>
     </FragmentList>
   </Slide>
 )

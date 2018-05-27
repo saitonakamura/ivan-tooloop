@@ -12,7 +12,7 @@ export const ClosePhaseSlide = props => (
     </ItH1>
     <FragmentList>
       <FragmentListItem>
-        Колбеки закрытия сокетов и прочего типа
+        Коллбэки закрытия сокетов и прочего типа
         <br />
         <Code>socket.on('close', …)</Code>
       </FragmentListItem>

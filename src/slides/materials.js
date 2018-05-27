@@ -60,14 +60,26 @@ export const MaterialsSlide = props => (
           </span>
         }
       />
+      <Etc>...</Etc>
     </Grid>
   </Slide>
 )
+
+const Etc = styled.div`
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+`
 
 const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: absolute;
+  top: 3%;
+  left: 5%;
 `
 
 const Cont = styled.a`

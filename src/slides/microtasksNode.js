@@ -11,7 +11,7 @@ export const MicrotasksNodeSlide = props => (
         <FragmentListItem>Promise.then</FragmentListItem>
         <FragmentListItem>process.nextTick</FragmentListItem>
         <FragmentListItem>
-          Выполняются каждый раз <br />когда пустеет стек
+          Выполняются каждый раз,<br />когда пустеет стек
         </FragmentListItem>
       </FragmentList>
       <Figcaption>Микротаски в ноде</Figcaption>

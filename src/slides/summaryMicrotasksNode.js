@@ -12,7 +12,7 @@ export const MicrotasksNodeSummarySlide = props => (
           Надо заботиться о бесконечных вызовах
         </FragmentListItem>
         <FragmentListItem listStyleType="🎉">
-          process.nextTick для вызова колбэков
+          process.nextTick для вызова коллбэков
         </FragmentListItem>
       </FragmentList>
       <Figcaption>Итоги по микротаскам в ноде</Figcaption>

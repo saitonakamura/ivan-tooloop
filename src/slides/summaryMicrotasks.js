@@ -15,7 +15,7 @@ export const MicrotasksSummarySlide = props => (
           Каждый раз после таски
         </FragmentListItem>
         <FragmentListItem listStyleType="🎉">
-          Каждый раз когда пустеет стек
+          Каждый раз, когда пустеет стек
         </FragmentListItem>
       </FragmentList>
       <Figcaption>Итоги по микротаскам</Figcaption>

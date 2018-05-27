@@ -12,7 +12,7 @@ export const CheckPhaseSlide = props => (
     <FragmentList>
       <FragmentListItem>setImmediate</FragmentListItem>
       <FragmentListItem>
-        setImmediate в Poll phase гарантированно раньше чем таймер
+        setImmediate в Poll-фазе гарантированно раньше, чем таймер
       </FragmentListItem>
     </FragmentList>
   </Slide>

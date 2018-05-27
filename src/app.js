@@ -40,7 +40,7 @@ export const App = () => (
     <Slides.NodeEventLoopSlide name="Event Loop в Node.js" />
     <Slides.LibuvSlide name="Libuv" />
     <Slides.TimersPhaseSlide name="Фаза таймеров" />
-    <Slides.PendingCallbacksPhaseSlide name="Фаза I/O колбэков" />
+    <Slides.PendingCallbacksPhaseSlide name="Фаза I/O коллбэков" />
     <Slides.NothingToDoHereSlide name="Фаза idle/prepare" />
     <Slides.PollPhaseSlide name="Фаза poll" />
     <Slides.CheckPhaseSlide name="Фаза check" />
@@ -51,6 +51,13 @@ export const App = () => (
 
     <Slides.MicroTasksTitleSlide name="Микротаски: малый круг кровообращения" />
     <Slides.EventLoopWhatwgSlide name="Event Loop версия whatwg" />
+    <Slides.BrowsersEventLoopDiagramSlide
+      name="Event Loop в браузере: микротаски"
+      task
+      render
+      raf
+      microtask={false}
+    />
     <Slides.MicrotaskSourcesSlide name="Источники микротасок" />
     <Slides.AllGonnaExecuteSlide name="Microtask checkpoint: выполняем всё" />
     <Slides.MicrotaskCheckpointSlide name="Как работает microtask checkpoint" />

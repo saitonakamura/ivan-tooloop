@@ -15,7 +15,7 @@ export const PendingCallbacksPhaseSlide = props => (
       <Info>
         <FragmentList>
           <FragmentListItem>
-            Колбэки от некоторых системных операций (TCP error)
+            Коллбэки от некоторых системных операций (TCP error)
           </FragmentListItem>
         </FragmentList>
       </Info>
