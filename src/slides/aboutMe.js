@@ -13,7 +13,7 @@ export const AboutMeSlide = props => (
     <ItH1 bordered margin="20px">
       Михаил Башуров
     </ItH1>
-    <P>Фулстак на JS / .NET</P>
+    <P>Фуллстэк на JS / .NET</P>
     <P style={{ marginBottom: '50px' }}>
       Люблю красивый UI, зеленые тесты, транспиляцию, компиляцию и dev
       experience.

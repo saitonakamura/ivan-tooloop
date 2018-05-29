@@ -16,6 +16,11 @@ export const App = () => (
     <Slides.InfractionSlide name="Факты об инфаркте" />
     <Slides.SystemicCirculationSlide name="Большой круг кровообращения" />
     <Slides.IOBoundCpuBoundSlide name="I/O bound vs CPU bound" />
+    <Slides.BrowsersEventLoopDiagramSlide
+      name="Event Loop в браузере: упрощенная версия"
+      task
+      render
+    />
     <Slides.ArithmiaAndTrombSlide name="Аритмия и тромб" />
     <Slides.RipSlide name="Вот и помер Дед Иван" />
     <Slides.BrowsersEventLoopDiagramSlide

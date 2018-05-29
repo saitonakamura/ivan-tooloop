@@ -24,7 +24,7 @@ export const TasksSummaryNodeSlide = props => (
           лучше process fork / thread pool
         </FragmentListItem>
         <FragmentListItem listStyleType="🎉">
-          setImmediate в poll - круто
+          setImmediate в poll — круто
         </FragmentListItem>
       </FragmentList>
       <Figcaption>Итоги по фазам ноды</Figcaption>

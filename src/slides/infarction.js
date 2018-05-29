@@ -19,7 +19,7 @@ export const InfractionSlide = props => (
             Десять дирижеров погибли от инфаркта
           </FragmentListItem>
           <FragmentListItem>
-            Некроз сердечной мышцы вызванный недостатом крови
+            Некроз сердечной мышцы, вызванный недостатом крови
           </FragmentListItem>
         </FragmentList>
       </LeftCol>
